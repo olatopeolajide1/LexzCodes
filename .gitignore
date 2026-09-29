@@ -1,0 +1,36 @@
+# Secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+*.tsbuildinfo
+
+# Hardhat
+cache/
+artifacts/
+coverage/
+coverage.json
+typechain-types/
+
+# Circuit build artifacts (reproducible via npm run circom:build && npm run setup:zkey)
+circuits/build/
+*.wasm
+*.r1cs
+*.sym
+*.zkey
+*.vkey.json
+pot*.ptau
+!circuits/build/age_verification_js/**/*
+!circuits/build/*.vkey.json
+
+# Next.js
+dapp/.next/
+dapp/out/
+dapp/next-env.d.ts
+
+# Misc
+.DS_Store
+*.log
+.tools/

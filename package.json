@@ -1,0 +1,34 @@
+{
+  "name": "lexzcodes-zk-age-verifier",
+  "version": "1.0.0",
+  "description": "ZK age-verification dApp: prove you are 18+ on-chain without revealing your birthdate (Circom + Groth16 + Hardhat + Next.js)",
+  "private": true,
+  "workspaces": [
+    "dapp"
+  ],
+  "scripts": {
+    "circom:build": "node scripts/circom-build.mjs",
+    "setup:zkey": "node scripts/groth16-setup.mjs",
+    "compile:contracts": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "build:dapp": "npm run build --workspace dapp",
+    "dev:dapp": "npm run dev --workspace dapp",
+    "build": "npm run compile:contracts && npm run build:dapp"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "circomlib": "^2.0.5",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.10",
+    "snarkjs": "^0.7.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

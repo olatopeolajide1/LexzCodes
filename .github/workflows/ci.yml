@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Circuits → Contracts → Tests → dApp build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Compile ZK circuit (circom → r1cs/wasm)
+        run: npm run circom:build
+
+      - name: Groth16 setup (zkey, vkey, verifier contract)
+        run: npm run setup:zkey
+
+      - name: Compile contracts
+        run: npm run compile:contracts
+
+      - name: Run tests (ZK proofs generated in-test)
+        run: npm test
+
+      - name: Install dApp dependencies
+        run: npm install --no-audit --no-fund --workspace dapp
+
+      - name: Copy ZK assets into dApp
+        run: node scripts/copy-zk-assets.mjs
+
+      - name: Build dApp (must be zero-error)
+        run: npm run build:dapp
+
+      - name: Upload circuit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zk-artifacts
+          path: |
+            circuits/build/age_verification.r1cs
+            circuits/build/age_verification_vkey.json
+          retention-days: 7

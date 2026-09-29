@@ -17,8 +17,24 @@ Prove **"I am at least 18 years old"** to a smart contract with a Groth16 zero-k
 
 ## 🎬 Demo (1 minute)
 
-> **Demo video:** _[`demo/README.md`](demo/README.md)_ — <!-- DEMO_VIDEO_LINK: paste the public URL of the recorded demo here after recording, e.g. [![Demo](https://img.youtube.com/vi/<id>/0.jpg)](https://youtube.com/watch?v=<id>) -->
-> Script of what the video covers: **wallet connect → in-browser ZK proof → on-chain verification result**, plus terminal tests and the green CI badge. See [`demo/README.md`](demo/README.md) for the full shot-by-shot script and the link placeholder to fill after recording.
+<!-- DEMO_VIDEO_LINK: after recording, DELETE the placeholder block below and UNCOMMENT the embed block for your host. Keep it a single clickable thumbnail so the README stays tidy. -->
+
+<!-- ▶️ PLACEHOLDER (until the real video is uploaded) -->
+[![zkAge Proof — demo video placeholder](demo/demo-thumbnail.svg)](demo/README.md)
+
+<!-- ▶️ YOUTUBE (uncomment and replace <id> once uploaded)
+[![Watch the demo](https://img.youtube.com/vi/<id>/hqdefault.jpg)](https://www.youtube.com/watch?v=<id>)
+-->
+
+<!-- ▶️ LOOM (uncomment and replace <key> once uploaded)
+[![Watch the demo](https://cdn.loom.com/sessions/shared/<key>-thumb.jpg)](https://www.loom.com/share/<key>)
+-->
+
+<!-- ▶️ GOOGLE DRIVE (uncomment and replace <fileid> once uploaded)
+[![Watch the demo](https://drive.google.com/thumbnail?id=<fileid>&sz=w1280)](https://drive.google.com/file/d/<fileid>/view)
+-->
+
+**What the video covers:** **wallet connect → in-browser ZK proof → on-chain verification result**, plus the terminal test run (7 passing) and the green CI badge. Full shot-by-shot script: [`demo/README.md`](demo/README.md).
 
 ## 📜 Deployed Contract (Sepolia)
 

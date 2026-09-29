@@ -8,6 +8,12 @@
 >
 > **Demo video:** _pending recording — paste public URL above and in the root `README.md`_
 
+### After recording (3 steps)
+
+1. Upload the video (YouTube / Loom / Google Drive) and paste the public URL in the block above.
+2. In the root `README.md`, **delete the placeholder thumbnail block** and **uncomment the embed block** for your host (YouTube / Loom / Drive) — both are clearly marked in the Demo section, you only replace the `<id>` / `<key>` / `<fileid>`.
+3. Until then, the README shows the placeholder image [`demo-thumbnail.svg`](demo-thumbnail.svg), which links back to this script page.
+
 ---
 
 ## Shot-by-shot script (60 seconds)

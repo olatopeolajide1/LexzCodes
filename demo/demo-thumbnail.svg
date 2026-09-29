@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Demo video placeholder — zkAge Proof">
+  <!-- background -->
+  <rect width="1280" height="720" fill="#0b1020"/>
+  <rect x="24" y="24" width="1232" height="672" rx="28" fill="#131a30" stroke="#253055" stroke-width="3"/>
+
+  <!-- subtle terminal-style top bar -->
+  <rect x="52" y="56" width="120" height="14" rx="7" fill="#253055"/>
+  <rect x="184" y="56" width="60" height="14" rx="7" fill="#253055"/>
+  <rect x="256" y="56" width="84" height="14" rx="7" fill="#253055"/>
+  <circle cx="1204" cy="63" r="9" fill="#3ddc97"/>
+
+  <!-- headline -->
+  <text x="640" y="240" text-anchor="middle" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="72" font-weight="700" fill="#e8ecf8">zkAge Proof — Demo</text>
+  <text x="640" y="308" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="30" fill="#93a0c4">wallet connect &#8594; in-browser ZK proof &#8594; on-chain result</text>
+
+  <!-- flow chips -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#e8ecf8">
+    <rect x="250" y="372" width="200" height="56" rx="14" fill="#0d1329" stroke="#6c8cff" stroke-width="2"/>
+    <text x="350" y="408" text-anchor="middle" fill="#6c8cff">Connect</text>
+
+    <text x="482" y="410" text-anchor="middle" fill="#93a0c4">&#8594;</text>
+
+    <rect x="514" y="372" width="200" height="56" rx="14" fill="#0d1329" stroke="#6c8cff" stroke-width="2"/>
+    <text x="614" y="408" text-anchor="middle" fill="#6c8cff">Prove (ZK)</text>
+
+    <text x="746" y="410" text-anchor="middle" fill="#93a0c4">&#8594;</text>
+
+    <rect x="778" y="372" width="220" height="56" rx="14" fill="#0d1329" stroke="#3ddc97" stroke-width="2"/>
+    <text x="888" y="408" text-anchor="middle" fill="#3ddc97">Verified 18+</text>
+  </g>
+
+  <!-- play button -->
+  <circle cx="640" cy="540" r="56" fill="#6c8cff"/>
+  <path d="M 622 512 L 622 568 L 670 540 Z" fill="#0b1020"/>
+
+  <!-- footer note -->
+  <text x="640" y="656" text-anchor="middle" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="22" fill="#93a0c4">Video placeholder &#8212; the recorded demo link will be embedded here</text>
+</svg>

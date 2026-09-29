@@ -19,8 +19,8 @@ Prove **"I am at least 18 years old"** to a smart contract with a Groth16 zero-k
 
 <!-- DEMO_VIDEO_LINK: after recording, DELETE the placeholder block below and UNCOMMENT the embed block for your host. Keep it a single clickable thumbnail so the README stays tidy. -->
 
-<!-- ▶️ PLACEHOLDER (until the real video is uploaded) -->
-[![zkAge Proof — demo video placeholder](demo/demo-thumbnail.svg)](demo/README.md)
+<!-- ▶️ PLACEHOLDER (until the real video is uploaded): animated preview of the actual dApp flow -->
+[![zkAge Proof — animated preview: connect wallet, generate ZK proof in-browser, verified on-chain](demo/demo-preview.svg)](demo/README.md)
 
 <!-- ▶️ YOUTUBE (uncomment and replace <id> once uploaded)
 [![Watch the demo](https://img.youtube.com/vi/<id>/hqdefault.jpg)](https://www.youtube.com/watch?v=<id>)
@@ -43,7 +43,33 @@ Prove **"I am at least 18 years old"** to a smart contract with a Groth16 zero-k
 | **AgeVerifier** | `TBD — see Deploy section` | — |
 | Groth16Verifier (auto-generated) | deployed alongside AgeVerifier | — |
 
-> **Note:** Run `npm run deploy:sepolia` (needs a funded key in `.env` — see [.env.example](.env.example)) and paste the printed AgeVerifier address here **and** into [`dapp/src/config.js`](dapp/src/config.js). Until then the dApp shows a "not configured" banner.
+> **Status:** not yet deployed — the deploy is fully scripted and takes ~2 minutes once a funded key exists. Until an address is filled in, the dApp shows a "not configured" banner.
+
+### Deploy runbook (fills the address above)
+
+```bash
+# 1) Get Sepolia ETH for gas — any faucet works:
+#    https://www.alchemy.com/faucets/ethereum-sepolia  (GitHub login)
+#    https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+#    https://sepolia-faucet.pk910.de  (browser PoW mining, no login)
+
+# 2) Put the funded key in .env (never committed — git-ignored):
+cp .env.example .env
+#    edit .env → SEPOLIA_PRIVATE_KEY=0x...
+
+# 3) Deploy (~2 tx):
+npm run deploy:sepolia
+#    → prints Groth16Verifier and AgeVerifier addresses
+
+# 4) Record the addresses:
+#    • README.md → the table right above (this section)
+#    • dapp/src/config.js → CONTRACT_ADDRESS
+
+# 5) Optional but recommended:
+npm run verify:sepolia -- <AgeVerifierAddress> <Groth16VerifierAddress>
+```
+
+A dedicated burner key was already generated for this deploy and is sitting in `.env` awaiting funds — send ≥ 0.01 Sepolia ETH to `0x7a38260C7F4D79027E5B708424C44E9eA0Ae05d5` and run step 3, or replace it with your own key.
 
 ## 🧠 What it proves
 

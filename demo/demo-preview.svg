@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Animated preview of the zkAge Proof dApp flow: connect wallet, generate ZK proof, verified on-chain">
+  <style>
+    .scr1 { opacity: 1; animation: s1 9s infinite; }
+    .scr2 { opacity: 0; animation: s2 9s infinite; }
+    .scr3 { opacity: 0; animation: s3 9s infinite; }
+    @keyframes s1 { 0% {opacity:1} 30% {opacity:1} 36% {opacity:0} 94% {opacity:0} 100% {opacity:1} }
+    @keyframes s2 { 0% {opacity:0} 30% {opacity:0} 36% {opacity:1} 63% {opacity:1} 69% {opacity:0} 100% {opacity:0} }
+    @keyframes s3 { 0% {opacity:0} 63% {opacity:0} 69% {opacity:1} 92% {opacity:1} 100% {opacity:0} }
+    .d1 { animation: s1 9s infinite; } .d2 { animation: s2 9s infinite; } .d3 { animation: s3 9s infinite; }
+    .spin { animation: rot 1.2s linear infinite; transform-origin: 942px 470px; }
+    @keyframes rot { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
+  </style>
+
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#131a30"/><stop offset="1" stop-color="#0d1329"/>
+    </linearGradient>
+  </defs>
+
+  <!-- app background -->
+  <rect width="1280" height="720" fill="#0b1020"/>
+
+  <!-- header -->
+  <rect x="0" y="0" width="1280" height="92" fill="url(#hdr)"/>
+  <text x="48" y="48" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="700" fill="#e8ecf8">ZK Age Verifier</text>
+  <text x="48" y="76" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#93a0c4">Circom · Groth16 · Sepolia — your birth date never leaves the browser.</text>
+  <rect x="1032" y="30" width="200" height="34" rx="17" fill="#0d1329" stroke="#253055"/>
+  <text x="1132" y="52" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#93a0c4">Connect Wallet</text>
+
+  <!-- step dots -->
+  <g font-family="ui-monospace, Menlo, monospace">
+    <circle cx="600" cy="668" r="7" fill="#0d1329" stroke="#253055"/>
+    <circle cx="600" cy="668" r="7" fill="#6c8cff" class="d1"/>
+    <circle cx="632" cy="668" r="7" fill="#0d1329" stroke="#253055"/>
+    <circle cx="632" cy="668" r="7" fill="#6c8cff" class="d2"/>
+    <circle cx="664" cy="668" r="7" fill="#0d1329" stroke="#253055"/>
+    <circle cx="664" cy="668" r="7" fill="#3ddc97" class="d3"/>
+  </g>
+  <text x="640" y="706" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#93a0c4">Animated preview of the real dApp flow — full demo video coming soon · zkAge Proof on Sepolia</text>
+
+  <!-- ══════════ SCREEN 1 · CONNECT ══════════ -->
+  <g class="scr1">
+    <rect x="240" y="140" width="800" height="480" rx="16" fill="#131a30" stroke="#253055" stroke-width="2"/>
+    <text x="640" y="208" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="600" fill="#e8ecf8">Prove you are 18+ — without revealing when you were born</text>
+    <text x="640" y="248" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#93a0c4">Your birth date never leaves this browser tab. Only a Groth16 proof</text>
+    <text x="640" y="272" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#93a0c4">and an unlinkable nullifier go on-chain.</text>
+
+    <rect x="480" y="340" width="320" height="56" rx="12" fill="#6c8cff"/>
+    <text x="640" y="376" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700" fill="#0b1020">Connect Wallet</text>
+
+    <rect x="500" y="440" width="280" height="40" rx="20" fill="#0d1329" stroke="#253055"/>
+    <circle cx="528" cy="460" r="10" fill="#f6851b"/>
+    <text x="656" y="466" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#93a0c4">MetaMask · Sepolia</text>
+
+    <text x="640" y="540" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#6c8cff">step 1 / 3 — connect an injected wallet</text>
+  </g>
+
+  <!-- ══════════ SCREEN 2 · PROVE ══════════ -->
+  <g class="scr2">
+    <rect x="240" y="140" width="800" height="480" rx="16" fill="#131a30" stroke="#253055" stroke-width="2"/>
+    <text x="640" y="208" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="600" fill="#e8ecf8">Prove you are 18+ — without revealing when you were born</text>
+
+    <g font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#93a0c4">
+      <rect x="300" y="260" width="200" height="52" rx="10" fill="#0d1329" stroke="#6c8cff"/>
+      <text x="316" y="292" fill="#e8ecf8" font-size="19">14</text>
+      <text x="316" y="252">Day</text>
+      <rect x="540" y="260" width="200" height="52" rx="10" fill="#0d1329" stroke="#6c8cff"/>
+      <text x="556" y="292" fill="#e8ecf8" font-size="19">5</text>
+      <text x="556" y="252">Month</text>
+      <rect x="780" y="260" width="200" height="52" rx="10" fill="#0d1329" stroke="#6c8cff"/>
+      <text x="796" y="292" fill="#e8ecf8" font-size="19">1990</text>
+      <text x="796" y="252">Year</text>
+    </g>
+
+    <rect x="480" y="356" width="320" height="56" rx="12" fill="#6c8cff"/>
+    <text x="640" y="392" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700" fill="#0b1020">Prove I'm 18+</text>
+
+    <circle cx="942" cy="470" r="16" fill="none" stroke="#253055" stroke-width="4"/>
+    <path d="M 942 454 A 16 16 0 0 1 958 470" fill="none" stroke="#6c8cff" stroke-width="4" stroke-linecap="round" class="spin"/>
+    <text x="700" y="476" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#93a0c4">Generating ZK proof (snarkjs, in your browser)…</text>
+
+    <text x="640" y="548" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#6c8cff">step 2 / 3 — birth date stays local · 584 constraints · ~2s</text>
+  </g>
+
+  <!-- ══════════ SCREEN 3 · VERIFIED ══════════ -->
+  <g class="scr3">
+    <rect x="240" y="140" width="800" height="480" rx="16" fill="#131a30" stroke="#253055" stroke-width="2"/>
+    <text x="640" y="208" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="600" fill="#e8ecf8">Prove you are 18+ — without revealing when you were born</text>
+
+    <rect x="300" y="270" width="680" height="150" rx="12" fill="#0d1329" stroke="#3ddc97"/>
+    <text x="640" y="322" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="700" fill="#3ddc97">✓ Verified on-chain: this wallet is 18+.</text>
+    <text x="640" y="360" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#93a0c4">nullifier: 0x4f3a…9c21  ·  Birth date: never revealed</text>
+    <text x="640" y="396" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#6c8cff">View transaction ↗  ·  sepolia.etherscan.io</text>
+
+    <rect x="300" y="456" width="680" height="64" rx="12" fill="#0d1329" stroke="#253055"/>
+    <text x="640" y="486" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#93a0c4">event AgeVerified(account, nullifier, timestamp)</text>
+    <text x="640" y="508" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#93a0c4">replay blocked via nullifierUsed[nullifier] ✓</text>
+
+    <text x="640" y="560" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#3ddc97">step 3 / 3 — verified on Sepolia · ~280k gas</text>
+  </g>
+</svg>

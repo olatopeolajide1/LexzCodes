@@ -12,7 +12,7 @@
 
 1. Upload the video (YouTube / Loom / Google Drive) and paste the public URL in the block above.
 2. In the root `README.md`, **delete the placeholder thumbnail block** and **uncomment the embed block** for your host (YouTube / Loom / Drive) — both are clearly marked in the Demo section, you only replace the `<id>` / `<key>` / `<fileid>`.
-3. Until then, the README shows the placeholder image [`demo-thumbnail.svg`](demo-thumbnail.svg), which links back to this script page.
+3. Until then, the README shows the animated preview [`demo-preview.svg`](demo-preview.svg) — a faithful animated mock of the real dApp flow (connect → prove → verified, same palette and screens) — which links back to this script page. The static fallback is [`demo-thumbnail.svg`](demo-thumbnail.svg).
 
 ---
 

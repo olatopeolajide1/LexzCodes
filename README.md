@@ -19,22 +19,12 @@ Prove **"I am at least 18 years old"** to a smart contract with a Groth16 zero-k
 
 <!-- DEMO_VIDEO_LINK: after recording, DELETE the placeholder block below and UNCOMMENT the embed block for your host. Keep it a single clickable thumbnail so the README stays tidy. -->
 
-<!-- ▶️ PLACEHOLDER (until the real video is uploaded): animated preview of the actual dApp flow -->
-[![zkAge Proof — animated preview: connect wallet, generate ZK proof in-browser, verified on-chain](demo/demo-preview.svg)](demo/README.md)
+<!-- ▶️ DEMO VIDEO — done. In-repo file + permanent Release download. -->
+**🎬 [▶ Watch the 1-minute demo](https://github.com/olatopeolajide1/LexzCodes/releases/tag/demo-v1)** — [download demo.mp4](https://github.com/olatopeolajide1/LexzCodes/releases/download/demo-v1/demo.mp4) · [view in-repo](demo/demo.mp4)
 
-<!-- ▶️ YOUTUBE (uncomment and replace <id> once uploaded)
-[![Watch the demo](https://img.youtube.com/vi/<id>/hqdefault.jpg)](https://www.youtube.com/watch?v=<id>)
--->
+[![zkAge Proof — 1-minute demo: tests, CI, real Groth16 proof verified on-chain](demo/demo-preview.svg)](https://github.com/olatopeolajide1/LexzCodes/releases/tag/demo-v1)
 
-<!-- ▶️ LOOM (uncomment and replace <key> once uploaded)
-[![Watch the demo](https://cdn.loom.com/sessions/shared/<key>-thumb.jpg)](https://www.loom.com/share/<key>)
--->
-
-<!-- ▶️ GOOGLE DRIVE (uncomment and replace <fileid> once uploaded)
-[![Watch the demo](https://drive.google.com/thumbnail?id=<fileid>&sz=w1280)](https://drive.google.com/file/d/<fileid>/view)
--->
-
-**What the video covers:** **wallet connect → in-browser ZK proof → on-chain verification result**, plus the terminal test run (7 passing) and the green CI badge. Full shot-by-shot script: [`demo/README.md`](demo/README.md).
+_Generated from real captured outputs (7-test run, live deploy, actual snarkjs proof, on-chain verification) — see [`demo/README.md`](demo/README.md)._ <!-- swap in a YouTube embed instead if you re-record: [![Watch the demo](https://img.youtube.com/vi/<id>/hqdefault.jpg)](https://www.youtube.com/watch?v=<id>) -->
 
 ## 📜 Deployed Contract (Sepolia)
 

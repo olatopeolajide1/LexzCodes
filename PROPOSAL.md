@@ -102,11 +102,11 @@ Trust assumptions, stated honestly:
 - [x] GitHub Actions CI compiling circuits, running the full test suite, and building the dApp on every push (zero errors required)
 - [x] README with CI badge, Privacy Model, architecture and file structure; PROPOSAL.md (this file)
 - [x] Demo video script ([`demo/README.md`](demo/README.md)) with placeholder embed in README
+- [x] **1-minute demo video generated from real captured flows** (7-test run, live deploy, actual Groth16 proof, on-chain verification) — published as Release [`demo-v1`](https://github.com/olatopeolajide1/LexzCodes/releases/tag/demo-v1) and linked in the README
 
 **Pending (blocked on external inputs):**
 
-- [ ] Funded Sepolia deploy of `AgeVerifier` → address to be recorded in README (`npm run deploy:sepolia`)
-- [ ] 1-minute demo video recording → link to be embedded in README
+- [ ] Funded Sepolia deploy of `AgeVerifier` → address to be recorded in README (`npm run deploy:sepolia`; deploy path verified end-to-end, burner key pre-wired in `.env` awaiting funds)
 
 ## 7. Roadmap / Future Work
 

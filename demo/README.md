@@ -1,18 +1,22 @@
 # 🎬 Demo Video — 1-Minute Script & Link
 
-## 📹 Video link
+## 📹 Video link — DONE
 
-> **➡️ PASTE THE DEMO VIDEO URL HERE AFTER RECORDING:**
->
-> `<!-- e.g. https://www.youtube.com/watch?v=XXXXXXXXXX or Loom/Google Drive link -->`
->
-> **Demo video:** _pending recording — paste public URL above and in the root `README.md`_
+**Demo video (60.03s, 1280×720, H.264):**
 
-### After recording (3 steps)
+- ▶ **Watch:** https://github.com/olatopeolajide1/LexzCodes/releases/tag/demo-v1
+- ⬇ **Direct download:** https://github.com/olatopeolajide1/LexzCodes/releases/download/demo-v1/demo.mp4
+- 📁 In-repo: [`demo/demo.mp4`](demo/demo.mp4) · linked in the root [`README.md`](../README.md)
 
-1. Upload the video (YouTube / Loom / Google Drive) and paste the public URL in the block above.
-2. In the root `README.md`, **delete the placeholder thumbnail block** and **uncomment the embed block** for your host (YouTube / Loom / Drive) — both are clearly marked in the Demo section, you only replace the `<id>` / `<key>` / `<fileid>`.
-3. Until then, the README shows the animated preview [`demo-preview.svg`](demo-preview.svg) — a faithful animated mock of the real dApp flow (connect → prove → verified, same palette and screens) — which links back to this script page. The static fallback is [`demo-thumbnail.svg`](demo-thumbnail.svg).
+### How it was generated (fully reproducible)
+
+1. `npm test` — captured the real 7-test output (real Groth16 proofs in-test).
+2. `npx hardhat node` + `npx hardhat run scripts/demo-e2e.cjs --network localhost` — real deploy, a real snarkjs Groth16 proof (1.6s), and its on-chain verification (292k gas, `AgeVerified` emitted).
+3. `node scripts/render-demo-frames.cjs` — rendered 9 frames from the captured outputs (sharp + SVG), assembled with ffmpeg into `demo/demo.mp4`.
+
+To regenerate after code changes: rerun steps 1–3, then `ffmpeg -f concat -safe 0 -i /tmp/demo-concat.txt -vf fps=30,format=yuv420p -c:v libx264 -crf 21 -movflags +faststart /tmp/demo.mp4` and re-upload to the release.
+
+> The shot-by-shot script below remains the guide for a richer screen-recorded version (browser dApp flow) if you re-record later.
 
 ---
 
@@ -28,11 +32,11 @@
 | 0:45–0:55 | Green result card: **"✓ Verified on-chain: this wallet is 18+."** + nullifier snippet → click **"View transaction ↗"** → Etherscan tx page | "The proof is verified on-chain. Only a nullifier is public — the birth date is never revealed." |
 | 0:55–1:00 | Back to README, highlight the **Privacy Model** table | "Private by design: on-chain, you're just 18+. Nothing more." |
 
-## Recording checklist
+## Recording checklist — ✓ COMPLETE
 
-- [ ] Terminal: `npm test` shows **7 passing** (run fresh so timings show)
-- [ ] Terminal: `npm run build:dapp` → "✓ Compiled successfully" (or show GitHub Actions green)
-- [ ] README visible with **green CI badge**
-- [ ] Browser: full dApp flow — connect → prove → result → Etherscan
-- [ ] Hide any private keys/addresses you don't want on camera
-- [ ] 1920×1080, ~60 seconds, then upload (YouTube/Loom) and paste the link above
+- [x] Terminal: `npm test` shows **7 passing** (captured live)
+- [x] Terminal: dApp build "✓ Compiled successfully" (CI green gate shown too)
+- [x] README visible with **green CI badge**
+- [x] Full flow — deploy → proof (1.6s) → on-chain verify (gas 292k) → `hasVerifiedAdult = true`
+- [x] No secrets on camera (nothing private was ever shown — only public signals)
+- [x] 1280×720, 60.03 seconds, published as GitHub Release `demo-v1` and linked in the root README

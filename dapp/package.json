@@ -1,0 +1,21 @@
+{
+  "name": "dapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "node ../scripts/copy-zk-assets.mjs",
+    "dev": "next dev",
+    "prebuild": "node ../scripts/copy-zk-assets.mjs",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.51.23",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "snarkjs": "^0.7.4",
+    "viem": "^2.19.8",
+    "wagmi": "^2.12.6"
+  }
+}

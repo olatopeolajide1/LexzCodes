@@ -8,7 +8,7 @@ async function main() {
   const bal = await hre.ethers.provider.getBalance(deployer.address);
   console.log(`› Balance: ${hre.ethers.formatEther(bal)} ETH`);
   if (network === "sepolia" && bal < hre.ethers.parseEther("0.005")) {
-    throw new Error("Insufficient Sepolia ETH. Get faucet ETH: https://sepoliafaucet.com / https://faucets.chain.link/sepolia");
+    throw new Error("Insufficient Sepolia ETH. Faucets: https://www.alchemy.com/faucets/ethereum-sepolia · https://cloud.google.com/application/web3/faucet/ethereum/sepolia · https://sepolia-faucet.pk910.de");
   }
 
   console.log("› Deploying Groth16Verifier ...");
